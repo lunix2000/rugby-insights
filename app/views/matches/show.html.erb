@@ -1,0 +1,45 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="match-card">
+  <%= link_to matches_path, class: "button secondary" do %>
+    <i class="bi bi-arrow-left"></i>
+    Back
+  <% end %>
+
+  <h1><%= @match.home_team %> vs <%= @match.away_team %></h1>
+
+  <div class="scoreboard">
+    <div class="score-box <%= @match.home_score > @match.away_score ? 'winner' : 'loser' %>">
+      <%= @match.home_score %>
+    </div>
+
+    <div class="dash">-</div>
+
+    <div class="score-box <%= @match.away_score > @match.home_score ? 'winner' : 'loser' %>">
+      <%= @match.away_score %>
+    </div>
+  </div>
+
+  <h2>Match Stats</h2>
+
+  <div class="stats-grid">
+    <p><strong>Possession:</strong> <%= @match.possession %>%</p>
+    <p><strong>Tackles made:</strong> <%= @match.tackles_made %></p>
+    <p><strong>Tackles missed:</strong> <%= @match.tackles_missed %></p>
+    <p><strong>Penalties:</strong> <%= @match.penalties %></p>
+  </div>
+
+  <div class="edit-section">
+  <%= link_to "Edit match", edit_match_path(@match), class: "edit_button primary" %>
+  </div>
+
+<h2>Notes</h2>
+
+<div class="stats-notes">
+  <p><%= @match.notes %></p>
+</div>
+
+  <div class="actions">
+    <%= button_to "Delete match", @match, method: :delete, class: "button delete" %>
+  </div>
+</div>

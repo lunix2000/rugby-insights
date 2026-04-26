@@ -1,0 +1,49 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Matches" %>
+<div class="titles">
+<h1>Matches</h1>
+</div>
+
+<%= link_to new_match_path, class: "button primary" do %>
+  <i class="bi bi-plus-lg"></i>
+  Add match
+<% end %>
+
+<div id="matches">
+<table class="matches-table">
+  <thead>
+    <tr>
+      <th>Home Team</th>
+      <th>Away Team</th>
+      <th>Home Score</th>
+      <th>Away Score</th>
+      <th>Possession</th>
+      <th>Tackles Made</th>
+      <th>Tackles Missed</th>
+      <th>Penalties</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @matches.each do |match| %>
+      <tr>
+        <td><%= match.home_team %></td>
+        <td><%= match.away_team %></td>
+        <td><%= match.home_score %></td>
+        <td><%= match.away_score %></td>
+        <td><%= match.possession %>%</td>
+        <td><%= match.tackles_made %></td>
+        <td><%= match.tackles_missed %></td>
+        <td><%= match.penalties %></td>
+        <td class="icon-cell">
+          <%= link_to match, class: "button secondary" do %>
+            <i class="bi bi-info-circle-fill"></i>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>

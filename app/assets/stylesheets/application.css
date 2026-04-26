@@ -1,0 +1,228 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    background: #010c16;
+    margin: 0;
+    padding: 40px;
+}
+
+.titles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.score-box {
+    width: 80px;
+    height: 80px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 42px;
+    font-weight: bold;
+    color: white;
+}
+
+.winner {
+    background: #16a34a;
+}
+
+.loser {
+    background: #dc2626;
+}
+
+.dash {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+}
+
+.match-card {
+    max-width: 700px;
+    margin: 0 auto;
+    background: rgb(12, 62, 168);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.match-card h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.stats-grid p {
+    background: #000000;
+    padding: 14px;
+    border-radius: 10px;
+}
+
+.stats-notes {
+    background: #000000;
+    padding: 14px;
+    border-radius: 10px;
+}
+
+.actions {
+    margin-top: 25px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    color: white;
+    padding: 10px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: inherit;
+    display: inline-block;
+}
+
+.edit-section {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+}
+
+.edit_button {
+    color: white;
+    padding: 10px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.primary {
+    background: #0c9408;
+}
+
+.secondary {
+    background: #ffffff;
+    color: #000000;
+}
+
+.delete {
+    background: #dc2626;
+}
+
+.matches-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.matches-table th,
+.matches-table td {
+    padding: 14px;
+    text-align: left;
+}
+
+.icon-cell {
+    text-align: center;
+}
+
+.matches-table th {
+    background: rgb(12, 62, 168);
+    color: white;
+}
+
+.matches-table td {
+    background: white;
+    color: #111827;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.create-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-top: 20px;
+}
+
+.form-input {
+    background-color: #000;
+    color: white;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-size: 16px;
+    width: 90%;
+    outline: none;
+    transition: all 0.2s ease;
+    margin-bottom: 15px;
+}
+
+.form-select {
+    background-color: #000;
+    color: white;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-size: 16px;
+    width: 100%;
+    outline: none;
+    transition: all 0.2s ease;
+    margin-bottom: 15px;
+}
+
+.form-score {
+    background-color: #000;
+    color: white;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-size: 16px;
+    width: 30%;
+    outline: none;
+    transition: all 0.2s ease;
+    margin-bottom: 15px;
+}
+
+.create-score {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.field-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.field-group label {
+    margin-bottom: 6px;
+    color: white;
+}

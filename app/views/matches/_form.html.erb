@@ -1,0 +1,84 @@
+<%= form_with(model: match) do |form| %>
+  <% if match.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(match.errors.count, "error") %> prohibited this match from being saved:</h2>
+
+      <ul>
+        <% match.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="match-card">
+<div>
+  <%= link_to matches_path, class: "button secondary" do %>
+    <i class="bi bi-arrow-left"></i>
+    Back
+  <% end %>
+</div>
+<div class="create-card" >
+  <div class="create-score">
+
+  <div class="field-group">
+    <%= form.label :home_team %>
+    <%= form.select :home_team, @teams,
+      { prompt: "Select Home Team" },
+      { class: "form-select" } %>
+  </div>
+
+  <div class="field-group">
+    <%= form.label :home_score %>
+    <%= form.number_field :home_score, class: "form-score" %>
+  </div>
+
+</div>
+<div class="create-score">
+  <div class="field-group">
+    <%= form.label :away_team, style: "display: block" %>
+    <%= form.select :away_team, @teams, 
+    { prompt: "Select Away Team" },
+    { class: "form-select" } %>
+  </div>
+  <div class="field-group">
+    <%= form.label :away_score, style: "display: block" %>
+    <%= form.number_field :away_score,
+     { class: "form-score" } %>
+  </div>
+</div>
+
+  <div>
+    <%= form.label :possession, style: "display: block" %>
+    <%= form.number_field :possession,
+     { class: "form-input" } %>
+  </div>
+
+  <div>
+    <%= form.label :tackles_made, style: "display: block" %>
+    <%= form.number_field :tackles_made,
+     { class: "form-input" } %>
+  </div>
+
+  <div>
+    <%= form.label :tackles_missed, style: "display: block" %>
+    <%= form.number_field :tackles_missed,
+     { class: "form-input" } %>
+  </div>
+
+  <div>
+    <%= form.label :penalties, style: "display: block" %>
+    <%= form.number_field :penalties,
+     { class: "form-input" } %>
+  </div>
+
+  <div>
+    <%= form.label :notes, style: "display: block" %>
+    <%= form.textarea :notes,
+     { class: "form-input" } %>
+  </div>
+</div>
+  <div>
+    <%= form.submit "Create Match", class: "button primary" %>
+  </div>
+<% end %>
+</div>

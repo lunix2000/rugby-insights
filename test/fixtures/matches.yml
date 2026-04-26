@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  home_team: MyString
+  away_team: MyString
+  home_score: 1
+  away_score: 1
+  possession: 1
+  tackles_made: 1
+  tackles_missed: 1
+  penalties: 1
+  notes: MyText
+
+two:
+  home_team: MyString
+  away_team: MyString
+  home_score: 1
+  away_score: 1
+  possession: 1
+  tackles_made: 1
+  tackles_missed: 1
+  penalties: 1
+  notes: MyText
